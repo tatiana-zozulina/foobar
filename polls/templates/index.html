@@ -1,0 +1,14 @@
+<html>
+<head>
+<style>.menu_item {padding:10px;}</style>
+</head>
+<body>
+{% if all_items %}
+    {% for item in all_items %}
+        <span class="menu_item"><a href="{{ item.link }}/">{{ item.name }}</a></span>
+    {% endfor %}
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
